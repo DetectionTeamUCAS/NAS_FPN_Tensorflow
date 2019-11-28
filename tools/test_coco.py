@@ -157,10 +157,10 @@ def parse_args():
 
     parser.add_argument('--eval_data', dest='eval_data',
                         help='evaluate imgs dir ',
-                        default='/unsullied/sharefs/_research_detection/GeneralDetection/COCO/data/MSCOCO/odformat/coco_minival2014.odgt', type=str)
+                        default='coco_minival2014.odgt', type=str)
     parser.add_argument('--json_file', dest='json_file',
                         help='test-dev json file',
-                        default='/home/yangxue/isilon/yangxue/code/yxdet/FPN_Tensorflow/tools/image_info_test-dev2017.json', type=str)
+                        default='image_info_test-dev2017.json', type=str)
     parser.add_argument('--showbox', dest='showbox',
                         help='whether show detecion results when evaluation',
                         default=False, type=bool)
@@ -176,25 +176,15 @@ def parse_args():
 
 if __name__ == '__main__':
 
-    # args = parse_args()
-    # print(20*"--")
-    # print(args)
-    # print(20*"--")
-    # os.environ["CUDA_VISIBLE_DEVICES"] = args.GPU
-    # eval(np.inf,  # use np.inf to test all the imgs. use 10 to test 10 imgs.
-    #      eval_data=args.eval_data,
-    #      eval_gt=args.eval_gt,
-    #      showbox=args.showbox)
-
-    os.environ["CUDA_VISIBLE_DEVICES"] = '0'
+    args = parse_args()
+    print(20*"--")
+    print(args)
+    print(20*"--")
+    os.environ["CUDA_VISIBLE_DEVICES"] = args.GPU
     eval(np.inf,  # use np.inf to test all the imgs. use 10 to test 10 imgs.
-         eval_data='/unsullied/sharefs/yangxue/isilon/yangxue/data/COCO/test2017',
-         json_file='/home/yangxue/isilon/yangxue/code/yxdet/FPN_TF_DEV/tools/image_info_test-dev2017.json',
-         showbox=True)
-
-    # cocoval('./eval_coco/FPN_Res101_20190108_v1/coco_res.json',
-    #         '/unsullied/sharefs/_research_detection/GeneralDetection/COCO/data/MSCOCO/instances_minival2014.json')
-
+         eval_data=args.eval_data,
+         json_file=args.json_file,
+         showbox=args.showbox)
 
 
 

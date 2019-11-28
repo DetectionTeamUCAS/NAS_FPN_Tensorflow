@@ -10,7 +10,7 @@ import cv2
 from libs.label_name_dict.label_dict import *
 from help_utils.tools import *
 
-tf.app.flags.DEFINE_string('VOC_dir', '/unsullied/sharefs/yangxue/isilon/yangxue/data/VOC2012/VOCdevkit/VOC2012/', 'Voc dir')
+tf.app.flags.DEFINE_string('VOC_dir', '/data/VOC2012/VOCdevkit/VOC2012/', 'Voc dir')
 tf.app.flags.DEFINE_string('xml_dir', 'Annotations', 'xml dir')
 tf.app.flags.DEFINE_string('image_dir', 'JPEGImages', 'image dir')
 tf.app.flags.DEFINE_string('save_name', 'train2012', 'save name')
@@ -87,7 +87,7 @@ def convert_pascal_to_tfrecord():
     # writer = tf.python_io.TFRecordWriter(path=save_path, options=writer_options)
     writer = tf.python_io.TFRecordWriter(path=save_path)
 
-    fr = open('/unsullied/sharefs/yangxue/isilon/yangxue/data/VOC2012/VOCdevkit/VOC2012/ImageSets/Main/trainval.txt', 'r')
+    fr = open('/data/VOC2012/VOCdevkit/VOC2012/ImageSets/Main/trainval.txt', 'r')
     lines = fr.readlines()
 
     real_cnt = 0

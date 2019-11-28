@@ -10,7 +10,7 @@ from libs.label_name_dict import coco_dict
 from libs.label_name_dict.label_dict import *
 
 
-root_path = '/unsullied/sharefs/yangxue/isilon/yangxue/data/DOTA/DOTA_TOTAL/'
+root_path = '/data/DOTA/DOTA_TOTAL/'
 xmls = os.listdir(os.path.join(root_path, 'xml_h'))
 total_imgs = len(xmls)
 

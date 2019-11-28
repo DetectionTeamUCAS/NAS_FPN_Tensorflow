@@ -11,7 +11,7 @@ from libs.label_name_dict import coco_dict
 from libs.label_name_dict.label_dict import *
 
 
-coco_trainvalmini = '/unsullied/sharefs/_research_detection/GeneralDetection/COCO/data/MSCOCO/odformat/coco_trainvalmini.odgt'
+coco_trainvalmini = './coco_trainvalmini.odgt'
 
 
 def next_img(step):

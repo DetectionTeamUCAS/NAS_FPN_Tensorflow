@@ -217,10 +217,10 @@ def parse_args():
 
     parser.add_argument('--eval_data', dest='eval_data',
                         help='evaluate imgs dir ',
-                        default='/unsullied/sharefs/_research_detection/GeneralDetection/COCO/data/MSCOCO/odformat/coco_minival2014.odgt', type=str)
+                        default='coco_minival2014.odgt', type=str)
     parser.add_argument('--eval_gt', dest='eval_gt',
                         help='eval gt',
-                        default='/unsullied/sharefs/_research_detection/GeneralDetection/COCO/data/MSCOCO/instances_minival2014.json',
+                        default='instances_minival2014.json',
                         type=str)
     parser.add_argument('--showbox', dest='showbox',
                         help='whether show detecion results when evaluation',
@@ -237,21 +237,15 @@ def parse_args():
 
 if __name__ == '__main__':
 
-    # args = parse_args()
-    # print(20*"--")
-    # print(args)
-    # print(20*"--")
-    # os.environ["CUDA_VISIBLE_DEVICES"] = args.GPU
-    # eval(np.inf,  # use np.inf to test all the imgs. use 10 to test 10 imgs.
-    #      eval_data=args.eval_data,
-    #      eval_gt=args.eval_gt,
-    #      showbox=args.showbox)
-
-    os.environ["CUDA_VISIBLE_DEVICES"] = '0'
+    args = parse_args()
+    print(20*"--")
+    print(args)
+    print(20*"--")
+    os.environ["CUDA_VISIBLE_DEVICES"] = args.GPU
     eval(np.inf,  # use np.inf to test all the imgs. use 10 to test 10 imgs.
-         eval_data='/unsullied/sharefs/_research_detection/GeneralDetection/COCO/data/MSCOCO/odformat/coco_minival2014.odgt',
-         eval_gt='/unsullied/sharefs/_research_detection/GeneralDetection/COCO/data/MSCOCO/instances_minival2014.json',
-         showbox=False)
+         eval_data=args.eval_data,
+         eval_gt=args.eval_gt,
+         showbox=args.showbox)
 
 
 

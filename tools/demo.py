@@ -293,7 +293,7 @@ if __name__ == "__main__":
     # inference(det_net, file_paths, args.des_folder, args.h_len, args.w_len,
     #            args.h_overlap, args.w_overlap,  args.save_res)
 
-    file_paths = get_file_paths_recursive('/unsullied/sharefs/yangxue/isilon/yangxue/data/DOTA/test/images', '.png')
+    file_paths = get_file_paths_recursive('/data/DOTA/test/images', '.png')
     det_net = build_whole_network.DetectionNetwork(base_network_name=cfgs.NET_NAME,
                                                    is_training=False)
     inference(det_net, file_paths, './demos/', 800, 800,

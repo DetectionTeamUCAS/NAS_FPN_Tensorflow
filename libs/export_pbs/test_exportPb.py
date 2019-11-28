@@ -64,8 +64,8 @@ def test(frozen_graph_path, test_dir):
 
 if __name__ == '__main__':
     os.environ["CUDA_VISIBLE_DEVICES"] = '0'
-    test('/home/yangxue/isilon/yangxue/code/yxdet/FPN_TF_DEV/output/Pbs/FPN_Res50_COCO_Frozen.pb',
-         '/unsullied/sharefs/yangxue/isilon/yangxue/data/COCO/train2017')
+    test('/data/code/yxdet/FPN_TF_DEV/output/Pbs/FPN_Res50_COCO_Frozen.pb',
+         '/data/COCO/train2017')
 
 
 

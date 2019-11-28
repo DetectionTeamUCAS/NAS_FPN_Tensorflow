@@ -158,17 +158,14 @@ def eval(num_imgs, eval_dir, annotation_dir, showbox):
 
 def parse_args():
 
-    # /unsullied/sharefs/yangxue/isilon/yangxue/data/BDD100K/BDD100K_VOC/bdd100k_val
-    # /unsullied/sharefs/yangxue/isilon/yangxue/data/VOC2007/test/VOCdevkit/VOC2007
-
     parser = argparse.ArgumentParser('evaluate the result with Pascal2007 stdand')
 
     parser.add_argument('--eval_imgs', dest='eval_imgs',
                         help='evaluate imgs dir ',
-                        default='/unsullied/sharefs/yangxue/isilon/yangxue/data/VOC2007/VOCdevkit/VOC2007/JPEGImages', type=str)
+                        default='/data/VOC2007/VOCdevkit/VOC2007/JPEGImages', type=str)
     parser.add_argument('--annotation_dir', dest='test_annotation_dir',
                         help='the dir save annotations',
-                        default='/unsullied/sharefs/yangxue/isilon/yangxue/data/VOC2007/VOCdevkit/VOC2007/Annotations', type=str)
+                        default='/data/VOC2007/VOCdevkit/VOC2007/Annotations', type=str)
     parser.add_argument('--showbox', dest='showbox',
                         help='whether show detecion results when evaluation',
                         default=True, type=bool)

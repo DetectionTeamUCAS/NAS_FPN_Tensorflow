@@ -95,9 +95,4 @@ def convert_pascal_to_tfrecord(coco_trainvalmini):
 
 
 if __name__ == '__main__':
-    # xml_path = '../data/dataset/VOCdevkit/VOC2007/Annotations/000005.xml'
-    # read_xml_gtbox_and_label(xml_path)
-
-    # coco_path = '/unsullied/sharefs/_research_detection/GeneralDetection/COCO/data/MSCOCO/odformat/coco_trainvalmini.odgt'
-    # convert_pascal_to_tfrecord(coco_path)
     convert_pascal_to_tfrecord(FLAGS.coco_dir)

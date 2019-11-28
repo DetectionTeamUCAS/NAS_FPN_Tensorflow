@@ -12,7 +12,7 @@ from data.io.image_preprocess import short_side_resize_for_inference_data
 from libs.configs import cfgs
 from libs.networks import build_whole_network
 
-CKPT_PATH = '/home/yangxue/isilon/yangxue/code/yxdet/FPN_TF_DEV/output/trained_weights/FPN_Res50_COCO_20190211_v18/voc_1599999model.ckpt'
+CKPT_PATH = '/data/code/yxdet/FPN_TF_DEV/output/trained_weights/FPN_Res50_COCO_20190211_v18/voc_1599999model.ckpt'
 OUT_DIR = '../../output/Pbs'
 PB_NAME = 'FPN_Res50_COCO.pb'
 

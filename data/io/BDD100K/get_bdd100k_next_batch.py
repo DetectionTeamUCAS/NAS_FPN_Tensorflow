@@ -10,7 +10,7 @@ from libs.label_name_dict import coco_dict
 from libs.label_name_dict.label_dict import *
 
 
-root_path = '/unsullied/sharefs/yangxue/isilon/yangxue/data/BDD100K/BDD100K_VOC/bdd100k_train/'
+root_path = '/data/BDD100K/BDD100K_VOC/bdd100k_train/'
 xmls = os.listdir(os.path.join(root_path, 'Annotations'))
 total_imgs = len(xmls)
 

@@ -304,11 +304,11 @@ def clip_image(file_idx, image, boxes_all, width, height):
         
 
 print('class_list', len(class_list))
-raw_data = '/unsullied/sharefs/yangxue/isilon/yangxue/data/DOTA/DOTA_TOTAL/'
+raw_data = '/data/DOTA/DOTA_TOTAL/'
 raw_images_dir = os.path.join(raw_data, 'images')
 raw_label_dir = os.path.join(raw_data, 'labelTxt')
 
-save_dir = '/unsullied/sharefs/yangxue/isilon/yangxue/data/DOTA/DOTA_TOTAL/'
+save_dir = '/data/DOTA/DOTA_TOTAL/'
 
 images = [i for i in os.listdir(raw_images_dir) if 'png' in i]
 labels = [i for i in os.listdir(raw_label_dir) if 'txt' in i]

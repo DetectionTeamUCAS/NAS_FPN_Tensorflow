@@ -161,7 +161,7 @@ def parse_args():
 
     parser.add_argument('--eval_imgs', dest='eval_imgs',
                         help='evaluate imgs dir ',
-                        default='/unsullied/sharefs/yangxue/isilon/yangxue/data/VOC2007/test/VOCdevkit/VOC2007/JPEGImages', type=str)
+                        default='/data/VOC2007/test/VOCdevkit/VOC2007/JPEGImages', type=str)
     parser.add_argument('--showbox', dest='showbox',
                         help='whether show detecion results when evaluation',
                         default=True, type=bool)

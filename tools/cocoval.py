@@ -14,6 +14,6 @@ def cocoval(detected_json, eval_json):
     cocoEval.summarize()
 
 
-detected_json = '/home/yangxue/isilon/yangxue/code/ADAS/output/yangxue/fpn/fpn.res50.coco.roialign.2x.detectron.new.concat/eval_dump/epoch-2.coco'
-eval_gt = '/unsullied/sharefs/_research_detection/GeneralDetection/COCO/data/MSCOCO/instances_minival2014.json'
+detected_json = 'epoch-2.coco'
+eval_gt = 'instances_minival2014.json'
 cocoval(detected_json, eval_gt)

@@ -92,7 +92,7 @@ def write_xml(save_path, name, box_list, label_list, w, h, d):
 
 
 for flag in FLAG:
-    BDD_path = '/unsullied/sharefs/_research_detection/GeneralDetection/BDD100K/bdd100k/'
+    BDD_path = '/BDD100K/bdd100k/'
     BDD_labels_dir = os.path.join(BDD_path, 'labels/bdd100k_labels_images_{}.json'.format(flag))
     BDD_labels = json.load(open(BDD_labels_dir, 'r'))
     BDD_images_dir = os.path.join(BDD_path, 'images/100k/{}'.format(flag))
@@ -114,12 +114,12 @@ for flag in FLAG:
             label_list.append(bb['category'])
 
         if len(box_list) != 0:
-            save_path = os.path.join('/unsullied/sharefs/yangxue/isilon/yangxue/data/BDD100K/BDD100K_VOC/bdd100k_{}/Annotations'.format(flag),
+            save_path = os.path.join('/data/BDD100K/BDD100K_VOC/bdd100k_{}/Annotations'.format(flag),
                                      img_name.replace('.jpg', '.xml'))
             write_xml(save_path, img_name, box_list, label_list, w, h, d)
         if cnt % 100 == 0:
             print('{} process: {}/{}'.format(flag, cnt+1, len(BDD_labels)))
-print('Finish!')
+    print('Finish!')
 
 
 
