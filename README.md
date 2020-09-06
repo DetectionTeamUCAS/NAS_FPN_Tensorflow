@@ -39,6 +39,12 @@ This repo is based on [FPN](https://github.com/DetectionTeamUCAS/NAS_FPN_Tensorf
 ### Trained weights
 **Select a configuration file in the folder ($PATH_ROOT/libs/configs/) and copy its contents into cfgs.py, then download the corresponding [weights](https://github.com/DetectionTeamUCAS/Models/tree/master/NAS_FPN_Tensorflow).**      
 
+### Others
+1、COCO dataset related      
+* [instances_minival2014.json](https://drive.google.com/file/d/1cgyEzdGVfx7zPNUO0lLfm8pu0HfIj3Xv/view?usp=sharing)
+* [coco_minival2014.odgt](https://drive.google.com/file/d/1Au55e6lqvuTunNBZO2Cj4Kh9XySyM3ZN/view?usp=sharing)        
+* [coco_trainvalmini.odgt](https://drive.google.com/file/d/1TSbPjY7HNDryIL3PB6pkO2EVDAwsyD3k/view?usp=sharing)    
+
 ## Compile
 ```  
 cd $PATH_ROOT/libs/box_utils/cython_utils
